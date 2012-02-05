@@ -10,4 +10,5 @@
 
 @interface MK61ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
 @end

@@ -9,6 +9,7 @@
 #import "MK61ViewController.h"
 
 @implementation MK61ViewController
+@synthesize display;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +27,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDisplay:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

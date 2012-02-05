@@ -22,14 +22,14 @@
 		9558EF3614DEBF80002D1E05 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9558EF3814DEBF80002D1E05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9558EF3A14DEBF80002D1E05 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9558EF3E14DEBF80002D1E05 /* MK61-Info.plist */ = {isa = PBXFileReference; path = "MK61-Info.plist"; sourceTree = "<group>"; };
+		9558EF3E14DEBF80002D1E05 /* MK61-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MK61-Info.plist"; sourceTree = "<group>"; };
 		9558EF4014DEBF80002D1E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9558EF4214DEBF80002D1E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9558EF4414DEBF80002D1E05 /* MK61-Prefix.pch */ = {isa = PBXFileReference; path = "MK61-Prefix.pch"; sourceTree = "<group>"; };
-		9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */ = {isa = PBXFileReference; path = MK61AppDelegate.h; sourceTree = "<group>"; };
+		9558EF4414DEBF80002D1E05 /* MK61-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MK61-Prefix.pch"; sourceTree = "<group>"; };
+		9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MK61AppDelegate.h; sourceTree = "<group>"; };
 		9558EF4614DEBF80002D1E05 /* MK61AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61AppDelegate.m; sourceTree = "<group>"; };
 		9558EF4914DEBF80002D1E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9558EF4B14DEBF80002D1E05 /* MK61ViewController.h */ = {isa = PBXFileReference; path = MK61ViewController.h; sourceTree = "<group>"; };
+		9558EF4B14DEBF80002D1E05 /* MK61ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MK61ViewController.h; sourceTree = "<group>"; };
 		9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
