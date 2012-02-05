@@ -11,4 +11,7 @@
 @interface MK61ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+
+- (IBAction)digitPressed:(UIButton*) sender;
+
 @end
