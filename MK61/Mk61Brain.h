@@ -10,4 +10,7 @@
 
 @interface Mk61Brain : NSObject
 
+- (void)pushOperand: (double)operand;
+- (double)performOperation: (NSString *)operation;
+
 @end

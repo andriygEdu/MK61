@@ -7,37 +7,62 @@
 //
 
 #import "MK61ViewController.h"
+#import "Mk61Brain.h"
 
 @interface MK61ViewController()
 
 @property (nonatomic) BOOL userInMiddleOfNumberEntering;
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (strong, nonatomic) IBOutlet Mk61Brain *brain;
 
 @end
 
 @implementation MK61ViewController
 
-@synthesize display = _display, userInMiddleOfNumberEntering = _userInMiddleOfNumberEntering;
+@synthesize brain = _brain;
+@synthesize display = _display;
+@synthesize userInMiddleOfNumberEntering = _userInMiddleOfNumberEntering;
+
+- (id)init
+{
+    self.userInMiddleOfNumberEntering = NO; 
+    return self;
+}
 
 - (IBAction)digitPressed:(UIButton*) sender {
+    NSString *digit = sender.currentTitle;
     if (self.userInMiddleOfNumberEntering) {
-        self.display.text = [self.display.text stringByAppendingString:sender.currentTitle];
+        self.display.text = [self.display.text stringByAppendingString:digit];
+    } else if ([self.display.text isEqualToString:@"0"] && [digit  isEqualToString:@"0"]) {
+        return;  
     } else {
-        self.display.text = sender.currentTitle;
+        self.display.text = digit;
         self.userInMiddleOfNumberEntering = YES;
     }
 }
 
 - (IBAction)enterPressed {
+    [self.brain pushOperand:[self.display.text doubleValue]];
     self.userInMiddleOfNumberEntering = NO;
 }
 
 - (IBAction)operationPressed:(UIButton*) sender {
-    NSLog(@"Operattion pressed: %@", sender.currentTitle);
+    if (self.userInMiddleOfNumberEntering) {
+        [self enterPressed];
+    }
+    double result = [self.brain performOperation:sender.currentTitle];
+    self.display.text = [NSString stringWithFormat:@"%g", result];  
+}
+
+- (IBAction)clearPressed {
+    self.display.text = @"0";
+    self.userInMiddleOfNumberEntering = NO;
 }
 
 - (void)viewDidUnload {
     [self setDisplay:nil];
+    [self setBrain:nil];
     [super viewDidUnload];
 }
+
 @end
