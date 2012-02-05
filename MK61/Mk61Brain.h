@@ -1,13 +1,13 @@
 //
-//  MK61ViewController.h
+//  Mk61Brain.h
 //  MK61
 //
 //  Created by Andriy Gushuley on 05.02.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface MK61ViewController : UIViewController
+@interface Mk61Brain : NSObject
 
 @end

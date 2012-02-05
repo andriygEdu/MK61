@@ -8,13 +8,36 @@
 
 #import "MK61ViewController.h"
 
+@interface MK61ViewController()
+
+@property (nonatomic) BOOL userInMiddleOfNumberEntering;
+@property (weak, nonatomic) IBOutlet UILabel *display;
+
+@end
+
 @implementation MK61ViewController
 
-@synthesize display = _display;
+@synthesize display = _display, userInMiddleOfNumberEntering = _userInMiddleOfNumberEntering;
 
 - (IBAction)digitPressed:(UIButton*) sender {
-    NSString *digit = sender.currentTitle;
-    NSLog(@"Button pressed: %@", digit);
+    if (self.userInMiddleOfNumberEntering) {
+        self.display.text = [self.display.text stringByAppendingString:sender.currentTitle];
+    } else {
+        self.display.text = sender.currentTitle;
+        self.userInMiddleOfNumberEntering = YES;
+    }
 }
 
+- (IBAction)enterPressed {
+    self.userInMiddleOfNumberEntering = NO;
+}
+
+- (IBAction)operationPressed:(UIButton*) sender {
+    NSLog(@"Operattion pressed: %@", sender.currentTitle);
+}
+
+- (void)viewDidUnload {
+    [self setDisplay:nil];
+    [super viewDidUnload];
+}
 @end

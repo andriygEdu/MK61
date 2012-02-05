@@ -15,6 +15,7 @@
 		9558EF4714DEBF80002D1E05 /* MK61AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9558EF4614DEBF80002D1E05 /* MK61AppDelegate.m */; };
 		9558EF4A14DEBF80002D1E05 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9558EF4814DEBF80002D1E05 /* MainStoryboard.storyboard */; };
 		9558EF4D14DEBF80002D1E05 /* MK61ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */; };
+		958C362714DEE8BC006D47CD /* Mk61Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 958C362614DEE8BC006D47CD /* Mk61Brain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		9558EF4914DEBF80002D1E05 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9558EF4B14DEBF80002D1E05 /* MK61ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MK61ViewController.h; sourceTree = "<group>"; };
 		9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61ViewController.m; sourceTree = "<group>"; };
+		958C362514DEE8BC006D47CD /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = "<group>"; };
+		958C362614DEE8BC006D47CD /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */,
 				9558EF4614DEBF80002D1E05 /* MK61AppDelegate.m */,
 				9558EF4814DEBF80002D1E05 /* MainStoryboard.storyboard */,
+				958C362514DEE8BC006D47CD /* Mk61Brain.h */,
+				958C362614DEE8BC006D47CD /* Mk61Brain.m */,
 				9558EF4B14DEBF80002D1E05 /* MK61ViewController.h */,
 				9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */,
 				9558EF3D14DEBF80002D1E05 /* Supporting Files */,
@@ -163,6 +168,7 @@
 				9558EF4314DEBF80002D1E05 /* main.m in Sources */,
 				9558EF4714DEBF80002D1E05 /* MK61AppDelegate.m in Sources */,
 				9558EF4D14DEBF80002D1E05 /* MK61ViewController.m in Sources */,
+				958C362714DEE8BC006D47CD /* Mk61Brain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +280,7 @@
 				9558EF5214DEBF80002D1E05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
