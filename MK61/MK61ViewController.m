@@ -31,14 +31,23 @@
 
 - (IBAction)digitPressed:(UIButton*) sender {
     NSString *digit = sender.currentTitle;
-    if (self.userInMiddleOfNumberEntering) {
-        self.display.text = [self.display.text stringByAppendingString:digit];
-    } else if ([self.display.text isEqualToString:@"0"] && [digit  isEqualToString:@"0"]) {
-        return;  
-    } else {
+    if (!self.userInMiddleOfNumberEntering && ![digit isEqualToString:@"."]) {
+        // replace for number if 
         self.display.text = digit;
         self.userInMiddleOfNumberEntering = YES;
-    }
+        return;
+    } else if ([digit isEqualToString:@"0"] && [self.display.text isEqualToString:@"0"]) {
+        // Skip zero adding if string is exactly zero
+        return;  
+    } else if ([digit isEqualToString:@"."]) {
+        // Skip dot adding if dot is already found in number number found
+        NSRange dotPosition = [self.display.text rangeOfString:@"."];
+        if (dotPosition.location != NSNotFound) {
+            return;
+        }
+    } 
+    self.userInMiddleOfNumberEntering = YES;
+    self.display.text = [self.display.text stringByAppendingString:digit];
 }
 
 - (IBAction)enterPressed {
