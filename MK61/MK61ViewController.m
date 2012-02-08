@@ -68,6 +68,11 @@
     self.userInMiddleOfNumberEntering = NO;
 }
 
+- (IBAction)fullClearPressed {
+    [self clearPressed];
+    [self.brain clear];
+}
+
 - (void)viewDidUnload {
     [self setDisplay:nil];
     [self setBrain:nil];
