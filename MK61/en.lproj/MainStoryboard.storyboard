@@ -21,14 +21,6 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="uhi-NF-FAx">
-                                <rect key="frame" x="92" y="20" width="15" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="acn-fU-cVI">
                                 <rect key="frame" x="20" y="268" width="64" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -359,6 +351,13 @@
                                     <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="Qg0-cP-ztF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="6HS-xA-uqc">
+                                <rect key="frame" x="20" y="0.0" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -368,10 +367,42 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <customObject id="thS-0u-7Ru" customClass="Mk61Brain"/>
+                <customObject id="thS-0u-7Ru" customClass="Mk61Brain">
+                    <connections>
+                        <outlet property="logger" destination="0CX-Q0-QQh" id="bM3-MF-uI8"/>
+                    </connections>
+                </customObject>
+                <customObject id="0CX-Q0-QQh" customClass="MK61Logger">
+                    <connections>
+                        <outlet property="label" destination="6HS-xA-uqc" id="qe7-Fo-m0w"/>
+                    </connections>
+                </customObject>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="MK61Logger" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MK61Logger.h"/>
+            <relationships>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MK61ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MK61ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="operationPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="brain" candidateClass="Mk61Brain"/>
+                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="Mk61Brain" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Mk61Brain.h"/>
+            <relationships>
+                <relationship kind="outlet" name="logger" candidateClass="MK61Logger"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

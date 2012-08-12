@@ -16,6 +16,7 @@
 		9558EF4A14DEBF80002D1E05 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9558EF4814DEBF80002D1E05 /* MainStoryboard.storyboard */; };
 		9558EF4D14DEBF80002D1E05 /* MK61ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */; };
 		95BB188815D83C5B00A7FB71 /* Mk61Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB188715D83C5B00A7FB71 /* Mk61Brain.m */; };
+		95BB18CD15D8412100A7FB71 /* MK61Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18CC15D8412100A7FB71 /* MK61Logger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		95BB185A15D83ABD00A7FB71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95BB188615D83C5B00A7FB71 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
 		95BB188715D83C5B00A7FB71 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
+		95BB18CB15D8412100A7FB71 /* MK61Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MK61Logger.h; sourceTree = SOURCE_ROOT; };
+		95BB18CC15D8412100A7FB71 /* MK61Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MK61Logger.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		9558EF3C14DEBF80002D1E05 /* MK61 */ = {
 			isa = PBXGroup;
 			children = (
+				95BB18CB15D8412100A7FB71 /* MK61Logger.h */,
+				95BB18CC15D8412100A7FB71 /* MK61Logger.m */,
 				95BB188615D83C5B00A7FB71 /* Mk61Brain.h */,
 				95BB188715D83C5B00A7FB71 /* Mk61Brain.m */,
 				9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */,
@@ -183,6 +188,7 @@
 				9558EF4714DEBF80002D1E05 /* MK61AppDelegate.m in Sources */,
 				9558EF4D14DEBF80002D1E05 /* MK61ViewController.m in Sources */,
 				95BB188815D83C5B00A7FB71 /* Mk61Brain.m in Sources */,
+				95BB18CD15D8412100A7FB71 /* MK61Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

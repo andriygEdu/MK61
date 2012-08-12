@@ -65,6 +65,9 @@
 
 - (IBAction)clearPressed {
     self.display.text = @"0";
+    if ( !_userInMiddleOfNumberEntering ) {
+        [_brain clearCurrent];
+    }
     self.userInMiddleOfNumberEntering = NO;
 }
 

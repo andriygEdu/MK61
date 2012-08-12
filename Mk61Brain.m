@@ -7,6 +7,7 @@
 //
 
 #import "Mk61Brain.h"
+#import "MK61Logger.h"
 
 @interface Mk61Brain()
 
@@ -17,6 +18,7 @@
 @implementation Mk61Brain
 
 @synthesize stack = _stack;
+@synthesize logger = _logger;
 
 - (NSMutableArray*) stack
 {
@@ -46,30 +48,41 @@
     id value = [NSNumber numberWithDouble:operand];
     [self.stack addObject:value];
     NSLog(@"Pushed value %@ from %@", value, self.stack);
+    [_logger logOperation: value];
 }
 
 - (double)performOperation: (NSString *)operation
 {
     double result = 0;
     if ( [ @"+" isEqualToString:operation ] ) {
-        result = self.popOperand + self.popOperand; 
+        result = self.popOperand + self.popOperand;
+        [_logger logOperation: operation];
     } else if ( [ @"*" isEqualToString:operation ] ) {
         result = self.popOperand * self.popOperand; 
+        [_logger logOperation: operation];
     } else if ( [ @"-" isEqualToString:operation ] ) {
         double subtractor = self.popOperand;
         result = self.popOperand - subtractor; 
+        [_logger logOperation: operation];
     } else if ( [ @"/" isEqualToString:operation ] ) {
         double divider = self.popOperand;
         result = self.popOperand / divider; 
-    } else if ( [ @"π" isEqualToString:operation ] ) { // PI 
+        [_logger logOperation: operation];
+    } else if ( [ @"π" isEqualToString:operation ] ) { // PI
         result = M_PI;
-    } else if ( [ @"√" isEqualToString:operation ] ) { // sqrt 
+        [_logger logOperation: operation];
+    } else if ( [ @"√" isEqualToString:operation ] ) { // sqrt
         result = sqrt( self.popOperand );
-    } else if ( [ @"sin" isEqualToString:operation ] ) { 
+        [_logger logOperation: operation];
+    } else if ( [ @"sin" isEqualToString:operation ] ) {
         result = sin( self.popOperand );
-    } else if ( [ @"cos" isEqualToString:operation ] ) { 
+        [_logger logOperation: operation];
+    } else if ( [ @"cos" isEqualToString:operation ] ) {
         result = cos( self.popOperand );
-    }    
+        [_logger logOperation: operation];
+    } else {
+        return NAN;
+    }
     
     [self pushOperand:result];
     
@@ -79,6 +92,11 @@
 - (void)clear
 {
     [self.stack removeAllObjects];
+    [_logger clear];
+}
+
+-(void) clearCurrent {
+    [_stack removeLastObject];
 }
 
 @end
