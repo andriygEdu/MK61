@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95BB189915D83CF300A7FB71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB189815D83CF300A7FB71 /* Cocoa.framework */; };
+		95BB18A315D83CF400A7FB71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18A115D83CF400A7FB71 /* InfoPlist.strings */; };
+		95BB18A515D83CF400A7FB71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18A415D83CF400A7FB71 /* main.m */; };
+		95BB18A915D83CF500A7FB71 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18A715D83CF500A7FB71 /* Credits.rtf */; };
+		95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */; };
+		95BB18AF15D83CF500A7FB71 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18AD15D83CF500A7FB71 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		95BB189415D83CF300A7FB71 /* AppledMK61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppledMK61.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BB189815D83CF300A7FB71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		95BB189B15D83CF300A7FB71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		95BB189C15D83CF300A7FB71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		95BB189D15D83CF300A7FB71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		95BB18A015D83CF400A7FB71 /* AppledMK61-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppledMK61-Info.plist"; sourceTree = "<group>"; };
+		95BB18A215D83CF400A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95BB18A415D83CF400A7FB71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95BB18A615D83CF500A7FB71 /* AppledMK61-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppledMK61-Prefix.pch"; sourceTree = "<group>"; };
+		95BB18A815D83CF500A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MK61AppDelegate.h; sourceTree = "<group>"; };
+		95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61AppDelegate.m; sourceTree = "<group>"; };
+		95BB18AE15D83CF500A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95BB189115D83CF300A7FB71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BB189915D83CF300A7FB71 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95BB188915D83CF300A7FB71 = {
+			isa = PBXGroup;
+			children = (
+				95BB189E15D83CF300A7FB71 /* AppledMK61 */,
+				95BB189715D83CF300A7FB71 /* Frameworks */,
+				95BB189515D83CF300A7FB71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95BB189515D83CF300A7FB71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95BB189415D83CF300A7FB71 /* AppledMK61.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95BB189715D83CF300A7FB71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95BB189815D83CF300A7FB71 /* Cocoa.framework */,
+				95BB189A15D83CF300A7FB71 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95BB189A15D83CF300A7FB71 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95BB189B15D83CF300A7FB71 /* AppKit.framework */,
+				95BB189C15D83CF300A7FB71 /* CoreData.framework */,
+				95BB189D15D83CF300A7FB71 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		95BB189E15D83CF300A7FB71 /* AppledMK61 */ = {
+			isa = PBXGroup;
+			children = (
+				95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */,
+				95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */,
+				95BB18AD15D83CF500A7FB71 /* MainMenu.xib */,
+				95BB189F15D83CF400A7FB71 /* Supporting Files */,
+			);
+			path = AppledMK61;
+			sourceTree = "<group>";
+		};
+		95BB189F15D83CF400A7FB71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95BB18A015D83CF400A7FB71 /* AppledMK61-Info.plist */,
+				95BB18A115D83CF400A7FB71 /* InfoPlist.strings */,
+				95BB18A415D83CF400A7FB71 /* main.m */,
+				95BB18A615D83CF500A7FB71 /* AppledMK61-Prefix.pch */,
+				95BB18A715D83CF500A7FB71 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95BB189315D83CF300A7FB71 /* AppledMK61 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95BB18B215D83CF500A7FB71 /* Build configuration list for PBXNativeTarget "AppledMK61" */;
+			buildPhases = (
+				95BB189015D83CF300A7FB71 /* Sources */,
+				95BB189115D83CF300A7FB71 /* Frameworks */,
+				95BB189215D83CF300A7FB71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppledMK61;
+			productName = AppledMK61;
+			productReference = 95BB189415D83CF300A7FB71 /* AppledMK61.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95BB188B15D83CF300A7FB71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MK61;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Andriy Gushuley";
+			};
+			buildConfigurationList = 95BB188E15D83CF300A7FB71 /* Build configuration list for PBXProject "AppledMK61" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 95BB188915D83CF300A7FB71;
+			productRefGroup = 95BB189515D83CF300A7FB71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95BB189315D83CF300A7FB71 /* AppledMK61 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95BB189215D83CF300A7FB71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BB18A315D83CF400A7FB71 /* InfoPlist.strings in Resources */,
+				95BB18A915D83CF500A7FB71 /* Credits.rtf in Resources */,
+				95BB18AF15D83CF500A7FB71 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95BB189015D83CF300A7FB71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BB18A515D83CF400A7FB71 /* main.m in Sources */,
+				95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95BB18A115D83CF400A7FB71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95BB18A215D83CF400A7FB71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		95BB18A715D83CF500A7FB71 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95BB18A815D83CF500A7FB71 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		95BB18AD15D83CF500A7FB71 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95BB18AE15D83CF500A7FB71 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95BB18B015D83CF500A7FB71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		95BB18B115D83CF500A7FB71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		95BB18B315D83CF500A7FB71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppledMK61/AppledMK61-Prefix.pch";
+				INFOPLIST_FILE = "AppledMK61/AppledMK61-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		95BB18B415D83CF500A7FB71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppledMK61/AppledMK61-Prefix.pch";
+				INFOPLIST_FILE = "AppledMK61/AppledMK61-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95BB188E15D83CF300A7FB71 /* Build configuration list for PBXProject "AppledMK61" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95BB18B015D83CF500A7FB71 /* Debug */,
+				95BB18B115D83CF500A7FB71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95BB18B215D83CF500A7FB71 /* Build configuration list for PBXNativeTarget "AppledMK61" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95BB18B315D83CF500A7FB71 /* Debug */,
+				95BB18B415D83CF500A7FB71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95BB188B15D83CF300A7FB71 /* Project object */;
+}

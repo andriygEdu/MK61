@@ -14,17 +14,17 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9558EF3114DEBF80002D1E05"
-               BuildableName = "MK61.app"
-               BlueprintName = "MK61"
+               BlueprintIdentifier = "95BB185215D83ABD00A7FB71"
+               BuildableName = "ApledMK61.app"
+               BlueprintName = "ApledMK61"
                ReferencedContainer = "container:MK61.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
@@ -32,29 +32,28 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9558EF3114DEBF80002D1E05"
-            BuildableName = "MK61.app"
-            BlueprintName = "MK61"
+            BlueprintIdentifier = "95BB185215D83ABD00A7FB71"
+            BuildableName = "ApledMK61.app"
+            BlueprintName = "ApledMK61"
             ReferencedContainer = "container:MK61.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9558EF3114DEBF80002D1E05"
-            BuildableName = "MK61.app"
-            BlueprintName = "MK61"
+            BlueprintIdentifier = "95BB185215D83ABD00A7FB71"
+            BuildableName = "ApledMK61.app"
+            BlueprintName = "ApledMK61"
             ReferencedContainer = "container:MK61.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9558EF3114DEBF80002D1E05"
-            BuildableName = "MK61.app"
-            BlueprintName = "MK61"
+            BlueprintIdentifier = "95BB185215D83ABD00A7FB71"
+            BuildableName = "ApledMK61.app"
+            BlueprintName = "ApledMK61"
             ReferencedContainer = "container:MK61.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

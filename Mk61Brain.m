@@ -51,24 +51,24 @@
 - (double)performOperation: (NSString *)operation
 {
     double result = 0;
-    if ([@"+" isEqualToString:operation]) {
+    if ( [ @"+" isEqualToString:operation ] ) {
         result = self.popOperand + self.popOperand; 
-    } else if ([@"*" isEqualToString:operation]) {
+    } else if ( [ @"*" isEqualToString:operation ] ) {
         result = self.popOperand * self.popOperand; 
-    } else if ([@"-" isEqualToString:operation]) {
+    } else if ( [ @"-" isEqualToString:operation ] ) {
         double subtractor = self.popOperand;
         result = self.popOperand - subtractor; 
-    } else if ([@"/" isEqualToString:operation]) {
+    } else if ( [ @"/" isEqualToString:operation ] ) {
         double divider = self.popOperand;
         result = self.popOperand / divider; 
-    } else if ([@"π" isEqualToString:operation]) { // PI 
+    } else if ( [ @"π" isEqualToString:operation ] ) { // PI 
         result = M_PI;
-    } else if ([@"√" isEqualToString:operation]) { // sqrt 
-        result = sqrt(self.popOperand);
-    } else if ([@"sin" isEqualToString:operation]) { 
-        result = sin(self.popOperand);
-    } else if ([@"cos" isEqualToString:operation]) { 
-        result = cos(self.popOperand);
+    } else if ( [ @"√" isEqualToString:operation ] ) { // sqrt 
+        result = sqrt( self.popOperand );
+    } else if ( [ @"sin" isEqualToString:operation ] ) { 
+        result = sin( self.popOperand );
+    } else if ( [ @"cos" isEqualToString:operation ] ) { 
+        result = cos( self.popOperand );
     }    
     
     [self pushOperand:result];

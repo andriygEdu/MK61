@@ -4,8 +4,12 @@
 <dict>
 	<key>BuildLocationStyle</key>
 	<string>UseAppPreferences</string>
+	<key>CustomBuildLocationType</key>
+	<string>RelativeToDerivedData</string>
+	<key>DerivedDataCustomLocation</key>
+	<string>DerivedData</string>
 	<key>DerivedDataLocationStyle</key>
-	<string>Default</string>
+	<string>WorkspaceRelativePath</string>
 	<key>HasAskedToTakeAutomaticSnapshotBeforeSignificantChanges</key>
 	<true/>
 	<key>IDEWorkspaceUserSettings_BuildLocationStyle</key>
