@@ -13,6 +13,8 @@
 		95BB18A915D83CF500A7FB71 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18A715D83CF500A7FB71 /* Credits.rtf */; };
 		95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */; };
 		95BB18AF15D83CF500A7FB71 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18AD15D83CF500A7FB71 /* MainMenu.xib */; };
+		95C190FA15D84FBD0022CE74 /* Mk61Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C190F715D84FBD0022CE74 /* Mk61Brain.m */; };
+		95C190FB15D84FBD0022CE74 /* MK61Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C190F915D84FBD0022CE74 /* MK61Logger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MK61AppDelegate.h; sourceTree = "<group>"; };
 		95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61AppDelegate.m; sourceTree = "<group>"; };
 		95BB18AE15D83CF500A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		95C190F615D84FBD0022CE74 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
+		95C190F715D84FBD0022CE74 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
+		95C190F815D84FBD0022CE74 /* MK61Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MK61Logger.h; sourceTree = SOURCE_ROOT; };
+		95C190F915D84FBD0022CE74 /* MK61Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MK61Logger.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 		95BB189E15D83CF300A7FB71 /* AppledMK61 */ = {
 			isa = PBXGroup;
 			children = (
+				95C190F615D84FBD0022CE74 /* Mk61Brain.h */,
+				95C190F715D84FBD0022CE74 /* Mk61Brain.m */,
+				95C190F815D84FBD0022CE74 /* MK61Logger.h */,
+				95C190F915D84FBD0022CE74 /* MK61Logger.m */,
 				95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */,
 				95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */,
 				95BB18AD15D83CF500A7FB71 /* MainMenu.xib */,
@@ -169,6 +179,8 @@
 			files = (
 				95BB18A515D83CF400A7FB71 /* main.m in Sources */,
 				95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */,
+				95C190FA15D84FBD0022CE74 /* Mk61Brain.m in Sources */,
+				95C190FB15D84FBD0022CE74 /* MK61Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +306,7 @@
 				95BB18B415D83CF500A7FB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
