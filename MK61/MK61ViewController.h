@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mk61Brain.h"
 
-@interface MK61ViewController : UIViewController
+@interface MK61ViewController : UIViewController<LogChangedDeletage>
 
 @end

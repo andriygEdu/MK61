@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MK61Logger.h"
+#import "MK61StackItem.h"
+
+@protocol LogChangedDeletage
+- (void) logChanged: (NSString*) log;
+@end
 
 @interface Mk61Brain : NSObject
 
-- (void)pushOperand: (double)operand;
-- (double)performOperation: (NSString *)operation;
-- (void)clear;
-- (void)clearCurrent;
-
-@property IBOutlet MK61Logger* logger;
+- (void) pushValue: (double) operand;
+- (void) pushValue: (double) operand andView: (NSString*) view;
+- (double) performOperation: (NSString *) operation;
+- (void) clear;
+- (void) clearCurrent;
 
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic) BOOL userInMiddleOfNumberEntering;
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (strong, nonatomic) IBOutlet Mk61Brain *brain;
+@property (weak) IBOutlet UILabel *logger;
 
 @end
 
@@ -51,7 +52,7 @@
 }
 
 - (IBAction)enterPressed {
-    [self.brain pushOperand:[self.display.text doubleValue]];
+    [self.brain pushValue: [self.display.text doubleValue]];
     self.userInMiddleOfNumberEntering = NO;
 }
 
@@ -80,6 +81,11 @@
     [self setDisplay:nil];
     [self setBrain:nil];
     [super viewDidUnload];
+}
+
+- (void) logChanged: (NSString*) log;
+{
+    _logger.text = log;
 }
 
 @end

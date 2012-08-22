@@ -7,18 +7,17 @@
 //
 
 #import "Mk61Brain.h"
-#import "MK61Logger.h"
 
 @interface Mk61Brain()
 
 @property (nonatomic, strong) NSMutableArray *stack;
+@property (weak) IBOutlet id<LogChangedDeletage> logChanged;
 
 @end
 
 @implementation Mk61Brain
 
 @synthesize stack = _stack;
-@synthesize logger = _logger;
 
 - (NSMutableArray*) stack
 {
@@ -28,63 +27,116 @@
     return _stack;
 }
 
-- (double) popOperand
+- (MK61StackItem*) popOperand
 {
-    NSNumber *operand = [self.stack lastObject];
+    MK61StackItem *operand = [self.stack lastObject];
     if (operand) {
         [self.stack removeLastObject];
     }
     NSLog(@"Pop value %@ from %@", operand, self.stack);
-    return [operand doubleValue];
+    return operand;
 }
 
-- (double) getPopOperand
+- (void) pushOperand: (MK61StackItem*) operand
 {
-    return [self popOperand];
+    [self.stack addObject: operand];
+    NSLog(@"Pushed value %@ into %@", operand, self.stack);
+    [self stackChanged];
 }
 
-- (void)pushOperand: (double)operand
+- (void) pushValue: (double) operand
 {
-    id value = [NSNumber numberWithDouble:operand];
-    [self.stack addObject:value];
-    NSLog(@"Pushed value %@ from %@", value, self.stack);
-    [_logger logOperation: value];
+    [self pushValue: operand andView: nil];
+}
+
+- (void) pushValue: (double) operand andView: (NSString*) view
+{
+    [self pushOperand: [MK61StackItem createValue: operand visible: view]];
+}
+
+- (void) pushResult: (MK61StackItem*) result
+{
+    [self.stack addObject: result];
+    NSLog(@"Result of operation %@ to %@", result, self.stack);
+}
+
+- (bool) popLValue: (MK61StackItem**) lvalue
+         andRValue: (MK61StackItem**) rvalue
+{
+    *rvalue = self.popOperand;
+    if ( !*rvalue ) {
+        return false;
+    }
+    *lvalue = self.popOperand;
+    if ( !*lvalue ) {
+        [self pushOperand: *rvalue];
+        *rvalue = nil;
+        return false;
+    }
+    return true;
 }
 
 - (double)performOperation: (NSString *)operation
 {
+    MK61StackItem* lvalue;
+    MK61StackItem* rvalue;
+    MK61StackItem* stackValue;
     double result = 0;
-    if ( [ @"+" isEqualToString:operation ] ) {
-        result = self.popOperand + self.popOperand;
-        [_logger logOperation: operation];
-    } else if ( [ @"*" isEqualToString:operation ] ) {
-        result = self.popOperand * self.popOperand; 
-        [_logger logOperation: operation];
-    } else if ( [ @"-" isEqualToString:operation ] ) {
-        double subtractor = self.popOperand;
-        result = self.popOperand - subtractor; 
-        [_logger logOperation: operation];
-    } else if ( [ @"/" isEqualToString:operation ] ) {
-        double divider = self.popOperand;
-        result = self.popOperand / divider; 
-        [_logger logOperation: operation];
-    } else if ( [ @"π" isEqualToString:operation ] ) { // PI
+    if ( [ @"+" isEqualToString: operation ] ) {
+        if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
+            return NAN;
+        }
+        result = lvalue.value + rvalue.value;
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+    } else if ( [ @"*" isEqualToString: operation ] ) {
+        if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
+            return NAN;
+        }
+        result = lvalue.value * rvalue.value;
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+    } else if ( [ @"-" isEqualToString: operation ] ) {
+        if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
+            return NAN;
+        }
+        result = lvalue.value - rvalue.value;
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+    } else if ( [ @"/" isEqualToString: operation ] ) {
+        if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
+            return NAN;
+        }
+        result = lvalue.value / rvalue.value;
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+    } else if ( [ @"π" isEqualToString: operation ] ) { // PI
         result = M_PI;
-        [_logger logOperation: operation];
-    } else if ( [ @"√" isEqualToString:operation ] ) { // sqrt
-        result = sqrt( self.popOperand );
-        [_logger logOperation: operation];
+        stackValue = [MK61StackItem createValue: M_PI visible: operation];
+    } else if ( [ @"√" isEqualToString: operation ] ) { // sqrt
+        lvalue = [self popOperand];
+        if ( !lvalue ) {
+            return NAN;
+        }
+        result = sqrt( lvalue.value );
+        stackValue = [MK61StackItem createUnaryOperation: operation value: result operand: lvalue];
     } else if ( [ @"sin" isEqualToString:operation ] ) {
-        result = sin( self.popOperand );
-        [_logger logOperation: operation];
+        lvalue = [self popOperand];
+        if ( !lvalue ) {
+            return NAN;
+        }
+        result = sin( lvalue.value );
+        stackValue = [MK61StackItem createFunction: operation value: result operand: lvalue];
     } else if ( [ @"cos" isEqualToString:operation ] ) {
-        result = cos( self.popOperand );
-        [_logger logOperation: operation];
+        lvalue = [self popOperand];
+        if ( !lvalue ) {
+            return NAN;
+        }
+        result = cos( lvalue.value );
+        stackValue = [MK61StackItem createFunction: operation value: result operand: lvalue];
     } else {
         return NAN;
     }
     
-    [self pushOperand:result];
+    if ( stackValue ) {
+        [self pushOperand: stackValue];
+    }
     
     return result;
 }
@@ -92,11 +144,18 @@
 - (void)clear
 {
     [self.stack removeAllObjects];
-    [_logger clear];
+    [self stackChanged];
 }
 
--(void) clearCurrent {
-    [_stack removeLastObject];
+-(void) clearCurrent
+{
+    [self popOperand];
 }
+
+- (void) stackChanged
+{
+    [_logChanged logChanged: [_stack componentsJoinedByString: @" "]];
+}
+
 
 @end

@@ -362,44 +362,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="brain" destination="thS-0u-7Ru" id="FAd-9i-bVz"/>
+                        <outlet property="brain" destination="thS-0u-7Ru" id="dfr-PT-09Y"/>
                         <outlet property="display" destination="Q0O-Oj-Z7D" id="NKq-wh-gqb"/>
+                        <outlet property="logger" destination="6HS-xA-uqc" id="rtj-mQ-OZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <customObject id="thS-0u-7Ru" customClass="Mk61Brain">
                     <connections>
-                        <outlet property="logger" destination="0CX-Q0-QQh" id="bM3-MF-uI8"/>
-                    </connections>
-                </customObject>
-                <customObject id="0CX-Q0-QQh" customClass="MK61Logger">
-                    <connections>
-                        <outlet property="label" destination="6HS-xA-uqc" id="qe7-Fo-m0w"/>
+                        <outlet property="logChanged" destination="2" id="9WD-Ql-SHM"/>
                     </connections>
                 </customObject>
             </objects>
         </scene>
     </scenes>
     <classes>
-        <class className="MK61Logger" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MK61Logger.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="MK61ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MK61ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="operationPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="brain" candidateClass="Mk61Brain"/>
                 <relationship kind="outlet" name="display" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="logger" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="Mk61Brain" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Mk61Brain.h"/>
             <relationships>
-                <relationship kind="outlet" name="logger" candidateClass="MK61Logger"/>
+                <relationship kind="outlet" name="logChanged"/>
             </relationships>
         </class>
     </classes>
