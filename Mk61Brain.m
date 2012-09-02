@@ -158,11 +158,12 @@
 -(void) clearCurrent
 {
     [self popOperand];
+    [self stackChanged];
 }
 
 - (void) stackChanged
 {
-    [_logChanged logChanged: [_stack componentsJoinedByString: @" "]];
+    [_logChanged logChanged: [_stack.lastObject description]];
 }
 
 

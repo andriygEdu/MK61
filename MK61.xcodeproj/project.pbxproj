@@ -39,12 +39,9 @@
 		9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61ViewController.m; sourceTree = "<group>"; };
 		958897A315E28EA4006A5000 /* MK61StackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MK61StackItem.h; sourceTree = SOURCE_ROOT; };
 		958897A415E28EA4006A5000 /* MK61StackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MK61StackItem.m; sourceTree = SOURCE_ROOT; };
-		95BB185815D83ABD00A7FB71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		95BB185915D83ABD00A7FB71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		95BB185A15D83ABD00A7FB71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		95B83BD215F3BA180039D17D /* MK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MK61.entitlements; sourceTree = "<group>"; };
 		95BB188615D83C5B00A7FB71 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
 		95BB188715D83C5B00A7FB71 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
-		95E92AC515EAAA9800624B3B /* MK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MK61.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +83,6 @@
 				9558EF3614DEBF80002D1E05 /* UIKit.framework */,
 				9558EF3814DEBF80002D1E05 /* Foundation.framework */,
 				9558EF3A14DEBF80002D1E05 /* CoreGraphics.framework */,
-				95BB185715D83ABD00A7FB71 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,7 +90,7 @@
 		9558EF3C14DEBF80002D1E05 /* MK61 */ = {
 			isa = PBXGroup;
 			children = (
-				95E92AC515EAAA9800624B3B /* MK61.entitlements */,
+				95B83BD215F3BA180039D17D /* MK61.entitlements */,
 				95BB188615D83C5B00A7FB71 /* Mk61Brain.h */,
 				95BB188715D83C5B00A7FB71 /* Mk61Brain.m */,
 				9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */,
@@ -118,16 +114,6 @@
 				9558EF4414DEBF80002D1E05 /* MK61-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		95BB185715D83ABD00A7FB71 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				95BB185815D83ABD00A7FB71 /* AppKit.framework */,
-				95BB185915D83ABD00A7FB71 /* CoreData.framework */,
-				95BB185A15D83ABD00A7FB71 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

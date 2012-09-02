@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		951E473815E6A41700A93798 /* MK61x114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x114x114.png; sourceTree = "<group>"; };
+		95B83BD415F3C2D50039D17D /* AppledMK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppledMK61.entitlements; sourceTree = "<group>"; };
 		95BB189415D83CF300A7FB71 /* AppledMK61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppledMK61.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BB189815D83CF300A7FB71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		95BB189B15D83CF300A7FB71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -34,7 +35,6 @@
 		95BB18AE15D83CF500A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		95C190F615D84FBD0022CE74 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
 		95C190F715D84FBD0022CE74 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
-		95E92AC415EAAA4E00624B3B /* AppledMK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppledMK61.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 		95BB189E15D83CF300A7FB71 /* AppledMK61 */ = {
 			isa = PBXGroup;
 			children = (
-				95E92AC415EAAA4E00624B3B /* AppledMK61.entitlements */,
+				95B83BD415F3C2D50039D17D /* AppledMK61.entitlements */,
 				95C190F615D84FBD0022CE74 /* Mk61Brain.h */,
 				95C190F715D84FBD0022CE74 /* Mk61Brain.m */,
 				95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */,
