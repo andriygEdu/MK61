@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951E473515E69FD800A93798 /* MK61x57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 951E473415E69FD800A93798 /* MK61x57x57.png */; };
+		951E473715E69FE600A93798 /* MK61x114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 951E473615E69FE600A93798 /* MK61x114x114.png */; };
 		9558EF3714DEBF80002D1E05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9558EF3614DEBF80002D1E05 /* UIKit.framework */; };
 		9558EF3914DEBF80002D1E05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9558EF3814DEBF80002D1E05 /* Foundation.framework */; };
 		9558EF3B14DEBF80002D1E05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9558EF3A14DEBF80002D1E05 /* CoreGraphics.framework */; };
@@ -16,12 +18,12 @@
 		9558EF4A14DEBF80002D1E05 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9558EF4814DEBF80002D1E05 /* MainStoryboard.storyboard */; };
 		9558EF4D14DEBF80002D1E05 /* MK61ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */; };
 		958897A515E28EA4006A5000 /* MK61StackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 958897A415E28EA4006A5000 /* MK61StackItem.m */; };
-		958897AC15E4057A006A5000 /* MK61x57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 958897AB15E4057A006A5000 /* MK61x57x57.png */; };
-		958897AE15E405C6006A5000 /* MK61x114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 958897AD15E405C6006A5000 /* MK61x114x114.png */; };
 		95BB188815D83C5B00A7FB71 /* Mk61Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB188715D83C5B00A7FB71 /* Mk61Brain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951E473415E69FD800A93798 /* MK61x57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x57x57.png; sourceTree = "<group>"; };
+		951E473615E69FE600A93798 /* MK61x114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x114x114.png; sourceTree = "<group>"; };
 		9558EF3214DEBF80002D1E05 /* MK61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MK61.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9558EF3614DEBF80002D1E05 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9558EF3814DEBF80002D1E05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,13 +39,12 @@
 		9558EF4C14DEBF80002D1E05 /* MK61ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MK61ViewController.m; sourceTree = "<group>"; };
 		958897A315E28EA4006A5000 /* MK61StackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MK61StackItem.h; sourceTree = SOURCE_ROOT; };
 		958897A415E28EA4006A5000 /* MK61StackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MK61StackItem.m; sourceTree = SOURCE_ROOT; };
-		958897AB15E4057A006A5000 /* MK61x57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x57x57.png; sourceTree = "<group>"; };
-		958897AD15E405C6006A5000 /* MK61x114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x114x114.png; sourceTree = "<group>"; };
 		95BB185815D83ABD00A7FB71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		95BB185915D83ABD00A7FB71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		95BB185A15D83ABD00A7FB71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95BB188615D83C5B00A7FB71 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
 		95BB188715D83C5B00A7FB71 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
+		95E92AC515EAAA9800624B3B /* MK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MK61.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +64,8 @@
 		9558EF2714DEBF7F002D1E05 = {
 			isa = PBXGroup;
 			children = (
-				958897AD15E405C6006A5000 /* MK61x114x114.png */,
-				958897AB15E4057A006A5000 /* MK61x57x57.png */,
+				951E473615E69FE600A93798 /* MK61x114x114.png */,
+				951E473415E69FD800A93798 /* MK61x57x57.png */,
 				9558EF3C14DEBF80002D1E05 /* MK61 */,
 				9558EF3514DEBF80002D1E05 /* Frameworks */,
 				9558EF3314DEBF80002D1E05 /* Products */,
@@ -93,6 +94,7 @@
 		9558EF3C14DEBF80002D1E05 /* MK61 */ = {
 			isa = PBXGroup;
 			children = (
+				95E92AC515EAAA9800624B3B /* MK61.entitlements */,
 				95BB188615D83C5B00A7FB71 /* Mk61Brain.h */,
 				95BB188715D83C5B00A7FB71 /* Mk61Brain.m */,
 				9558EF4514DEBF80002D1E05 /* MK61AppDelegate.h */,
@@ -154,7 +156,7 @@
 		9558EF2914DEBF7F002D1E05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 9558EF2C14DEBF7F002D1E05 /* Build configuration list for PBXProject "MK61" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -180,8 +182,8 @@
 			files = (
 				9558EF4114DEBF80002D1E05 /* InfoPlist.strings in Resources */,
 				9558EF4A14DEBF80002D1E05 /* MainStoryboard.storyboard in Resources */,
-				958897AC15E4057A006A5000 /* MK61x57x57.png in Resources */,
-				958897AE15E405C6006A5000 /* MK61x114x114.png in Resources */,
+				951E473515E69FD800A93798 /* MK61x57x57.png in Resources */,
+				951E473715E69FE600A93798 /* MK61x114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +272,7 @@
 		9558EF5114DEBF80002D1E05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MK61/MK61.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MK61/MK61-Prefix.pch";
 				INFOPLIST_FILE = "MK61/MK61-Info.plist";
@@ -282,6 +285,7 @@
 		9558EF5214DEBF80002D1E05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MK61/MK61.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MK61/MK61-Prefix.pch";
 				INFOPLIST_FILE = "MK61/MK61-Info.plist";

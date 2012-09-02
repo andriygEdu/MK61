@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951E473915E6A41700A93798 /* MK61x114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 951E473815E6A41700A93798 /* MK61x114x114.png */; };
 		95BB189915D83CF300A7FB71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB189815D83CF300A7FB71 /* Cocoa.framework */; };
 		95BB18A315D83CF400A7FB71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18A115D83CF400A7FB71 /* InfoPlist.strings */; };
 		95BB18A515D83CF400A7FB71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18A415D83CF400A7FB71 /* main.m */; };
@@ -14,10 +15,10 @@
 		95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */; };
 		95BB18AF15D83CF500A7FB71 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BB18AD15D83CF500A7FB71 /* MainMenu.xib */; };
 		95C190FA15D84FBD0022CE74 /* Mk61Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C190F715D84FBD0022CE74 /* Mk61Brain.m */; };
-		95C190FB15D84FBD0022CE74 /* MK61Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C190F915D84FBD0022CE74 /* MK61Logger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951E473815E6A41700A93798 /* MK61x114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MK61x114x114.png; sourceTree = "<group>"; };
 		95BB189415D83CF300A7FB71 /* AppledMK61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppledMK61.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BB189815D83CF300A7FB71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		95BB189B15D83CF300A7FB71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -33,8 +34,7 @@
 		95BB18AE15D83CF500A7FB71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		95C190F615D84FBD0022CE74 /* Mk61Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mk61Brain.h; sourceTree = SOURCE_ROOT; };
 		95C190F715D84FBD0022CE74 /* Mk61Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mk61Brain.m; sourceTree = SOURCE_ROOT; };
-		95C190F815D84FBD0022CE74 /* MK61Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MK61Logger.h; sourceTree = SOURCE_ROOT; };
-		95C190F915D84FBD0022CE74 /* MK61Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MK61Logger.m; sourceTree = SOURCE_ROOT; };
+		95E92AC415EAAA4E00624B3B /* AppledMK61.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppledMK61.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +52,7 @@
 		95BB188915D83CF300A7FB71 = {
 			isa = PBXGroup;
 			children = (
+				951E473815E6A41700A93798 /* MK61x114x114.png */,
 				95BB189E15D83CF300A7FB71 /* AppledMK61 */,
 				95BB189715D83CF300A7FB71 /* Frameworks */,
 				95BB189515D83CF300A7FB71 /* Products */,
@@ -88,10 +89,9 @@
 		95BB189E15D83CF300A7FB71 /* AppledMK61 */ = {
 			isa = PBXGroup;
 			children = (
+				95E92AC415EAAA4E00624B3B /* AppledMK61.entitlements */,
 				95C190F615D84FBD0022CE74 /* Mk61Brain.h */,
 				95C190F715D84FBD0022CE74 /* Mk61Brain.m */,
-				95C190F815D84FBD0022CE74 /* MK61Logger.h */,
-				95C190F915D84FBD0022CE74 /* MK61Logger.m */,
 				95BB18AA15D83CF500A7FB71 /* MK61AppDelegate.h */,
 				95BB18AB15D83CF500A7FB71 /* MK61AppDelegate.m */,
 				95BB18AD15D83CF500A7FB71 /* MainMenu.xib */,
@@ -167,6 +167,7 @@
 				95BB18A315D83CF400A7FB71 /* InfoPlist.strings in Resources */,
 				95BB18A915D83CF500A7FB71 /* Credits.rtf in Resources */,
 				95BB18AF15D83CF500A7FB71 /* MainMenu.xib in Resources */,
+				951E473915E6A41700A93798 /* MK61x114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +181,6 @@
 				95BB18A515D83CF400A7FB71 /* main.m in Sources */,
 				95BB18AC15D83CF500A7FB71 /* MK61AppDelegate.m in Sources */,
 				95C190FA15D84FBD0022CE74 /* Mk61Brain.m in Sources */,
-				95C190FB15D84FBD0022CE74 /* MK61Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +266,13 @@
 		95BB18B315D83CF500A7FB71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppledMK61/AppledMK61.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppledMK61/AppledMK61-Prefix.pch";
 				INFOPLIST_FILE = "AppledMK61/AppledMK61-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -278,10 +281,13 @@
 		95BB18B415D83CF500A7FB71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppledMK61/AppledMK61.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppledMK61/AppledMK61-Prefix.pch";
 				INFOPLIST_FILE = "AppledMK61/AppledMK61-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

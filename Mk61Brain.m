@@ -87,25 +87,33 @@
             return NAN;
         }
         result = lvalue.value + rvalue.value;
-        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result
+                        lvalue: lvalue rvalue: rvalue
+                        priority: MK61StackItemOperationPriorityAddition];
     } else if ( [ @"*" isEqualToString: operation ] ) {
         if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
             return NAN;
         }
         result = lvalue.value * rvalue.value;
-        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result
+                                                   lvalue: lvalue rvalue: rvalue
+                                                 priority: MK61StackItemOperationPriorityMultiplication];
     } else if ( [ @"-" isEqualToString: operation ] ) {
         if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
             return NAN;
         }
         result = lvalue.value - rvalue.value;
-        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result
+                                                   lvalue: lvalue rvalue: rvalue
+                                                 priority: MK61StackItemOperationPriorityAddition];
     } else if ( [ @"/" isEqualToString: operation ] ) {
         if ( ![self popLValue: &lvalue andRValue: &rvalue] ) {
             return NAN;
         }
         result = lvalue.value / rvalue.value;
-        stackValue = [MK61StackItem createBinaryOperation: operation value: result lvalue: lvalue rvalue: rvalue];
+        stackValue = [MK61StackItem createBinaryOperation: operation value: result
+                                                   lvalue: lvalue rvalue: rvalue
+                                                 priority: MK61StackItemOperationPriorityMultiplication];
     } else if ( [ @"π" isEqualToString: operation ] ) { // PI
         result = M_PI;
         stackValue = [MK61StackItem createValue: M_PI visible: operation];

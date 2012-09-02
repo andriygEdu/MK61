@@ -19,9 +19,10 @@ enum StackItemType {
 @interface  MK61StackItem()
 
 @property int type;
-@property id lvalue;
-@property id rvalue;
+@property MK61StackItem* lvalue;
+@property MK61StackItem* rvalue;
 @property NSString* operation;
+@property int priority;
 
 @end
 
@@ -32,6 +33,7 @@ enum StackItemType {
 @synthesize lvalue = _lvalue;
 @synthesize rvalue = _rvalue;
 @synthesize operation = _operation;
+@synthesize priority = _priority;
 
 - (id) initValue: (double) value
          visible: (id) visible
@@ -56,7 +58,7 @@ enum StackItemType {
 
 + (MK61StackItem*) createUnaryOperation:(NSString*) operation
                                   value: (double) value
-                                operand: (id) operand
+                                operand: (MK61StackItem*) operand
 {
     return [[MK61StackItem alloc] initUnaryOperation: operation value: value operand: operand];
 }
@@ -77,17 +79,20 @@ enum StackItemType {
 
 + (MK61StackItem*) createBinaryOperation: (NSString*) operation
                                    value: (double) value
-                                  lvalue: (id) lvalue
-                                  rvalue: (id) rvalue
+                                  lvalue: (MK61StackItem*) lvalue
+                                  rvalue: (MK61StackItem*) rvalue
+                                priority: (int) priority
 {
     return [[MK61StackItem alloc] initBinaryOperation: operation
-                                                value: value lvalue: lvalue rvalue: rvalue];
+                                                value: value lvalue: lvalue rvalue: rvalue
+                                             priority: priority];
 }
 
 - (id) initBinaryOperation: (NSString*) operation
                      value: (double) value
-                    lvalue: (id) lvalue
-                    rvalue: (id) rvalue
+                    lvalue: (MK61StackItem*) lvalue
+                    rvalue: (MK61StackItem*) rvalue
+                  priority: (int) priority;
 {
     self = [super init];
     
@@ -96,20 +101,21 @@ enum StackItemType {
     _operation = operation;
     _lvalue = lvalue;
     _rvalue = rvalue;
+    _priority = priority;
     
     return self;
 }
 
 + (MK61StackItem*) createFunction: (NSString*) operation
                             value: (double) value
-                          operand: (id) operand
+                          operand: (MK61StackItem*) operand
 {
     return [[MK61StackItem alloc] initFunction: operation value: value operand: operand];
 }
 
 - (id) initFunction: (NSString*) function
               value: (double) value
-            operand: (id) operand
+            operand: (MK61StackItem*) operand
 {
     self = [super init];
     
@@ -121,30 +127,48 @@ enum StackItemType {
     return self;
 }
 
-- (NSString*) description {
+- (NSString*) description
+{
     switch ( _type ) {
         case Value:
             if ( _lvalue ) {
-            return [_lvalue description];
+                return [_lvalue description];
             } else {
                 return [NSString stringWithFormat: @"%g", _value];
             }
             break;
             
         case UnaryOperation:
-            return [NSString stringWithFormat: @"%@%@", _operation, _lvalue];
-            break;
-            
-        case BinaryOperation:
-            return [NSString stringWithFormat: @"( %@ %@ %@ )", _lvalue, _operation, _rvalue];
-            break;
-            
         case Function:
-            return [NSString stringWithFormat: @"%@( %@ )", _operation, _lvalue];
+            if ( _lvalue.type == BinaryOperation ) {
+                return [NSString stringWithFormat: @"%@( %@ )", _operation, _lvalue];
+            } else {
+                return [NSString stringWithFormat: @"%@ %@", _operation, _lvalue];
+            }
             break;
+            
+        case BinaryOperation: {
+            id lmodified;
+            if ( _lvalue.type == BinaryOperation && _lvalue.priority < _priority ) {
+                lmodified = [NSString stringWithFormat: @"( %@ )", _lvalue];
+            } else {
+                lmodified = _lvalue;
+            }
+            
+            id rmodified;
+            if ( _rvalue.type == BinaryOperation && _rvalue.priority < _priority ) {
+                rmodified = [NSString stringWithFormat: @"( %@ )", _rvalue];
+            } else {
+                rmodified = _rvalue;
+            }
+            
+            return [NSString stringWithFormat: @"%@ %@ %@", lmodified, _operation, rmodified];
+            break;
+        }
     }
     return [NSString stringWithFormat: @"undefinined( %d, %@, %@, %@ )",
             _type, _operation, _lvalue, _rvalue];
+    
 }
-
+                             
 @end
