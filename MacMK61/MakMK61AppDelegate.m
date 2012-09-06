@@ -1,14 +1,14 @@
 //
-//  MK61AppDelegate.m
-//  AppledMK61
+//  MakMK61AppDelegate.m
+//  MacMK61
 //
-//  Created by Andriy Gushuley on 12.08.12.
+//  Created by Andriy Gushuley on 05.09.12.
 //  Copyright (c) 2012 Andriy Gushuley. All rights reserved.
 //
 
-#import "MK61AppDelegate.h"
+#import "MakMK61AppDelegate.h"
 
-@implementation MK61AppDelegate
+@implementation MakMK61AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {

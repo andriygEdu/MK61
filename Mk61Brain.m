@@ -11,7 +11,7 @@
 @interface Mk61Brain()
 
 @property (nonatomic, strong) NSMutableArray *stack;
-@property (weak) IBOutlet id<LogChangedDeletage> logChanged;
+@property IBOutlet id<LogChangedDeletage> logChanged;
 
 @end
 

@@ -1,8 +1,8 @@
 //
 //  main.m
-//  AppledMK61
+//  MacMK61
 //
-//  Created by Andriy Gushuley on 12.08.12.
+//  Created by Andriy Gushuley on 05.09.12.
 //  Copyright (c) 2012 Andriy Gushuley. All rights reserved.
 //
 

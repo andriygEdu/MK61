@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AppledMK61.xcodeproj">
+      location = "group:MK61.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MK61.xcodeproj">
+      location = "group:MacMK61.xcodeproj">
    </FileRef>
 </Workspace>
